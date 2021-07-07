@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mediatrr</Title>
+			<Shortcut>mediatrr</Shortcut>
+			<Description>Code snippet for mediatr with return value</Description>
+			<Author>firat.atceken</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>request</ID>
+					<Default>SampleMediatrRequest</Default> 
+				</Literal>
+				<Literal>
+					<ID>return</ID>
+					<Default>SampleReturnType</Default> 
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+			 public class $request$ : IRequest<$return$>
+				{
+				
+				}
+				
+		public class $request$Handler : IRequestHandler<$request$,$return$>
+    {
+        public $request$Handler()
+        {
+            
+        }
+
+        public Task<$return$> Handle($request$ request, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+    } $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

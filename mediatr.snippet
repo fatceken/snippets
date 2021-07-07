@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mediatr</Title>
+			<Shortcut>mediatr</Shortcut>
+			<Description>Code snippet for mediatr without return value</Description>
+			<Author>firat.atceken</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>request</ID>
+					<Default>SampleMediatrRequest</Default> 
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+			 public class $request$ : IRequest
+				{
+				
+				}
+				
+		public class $request$Handler : IRequestHandler<$request$>
+    {
+        public $request$Handler()
+        {
+            
+        }
+
+        public Task<Unit> Handle($request$ request, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+    } $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
