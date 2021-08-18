@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>xunit</Title>
+			<Shortcut>xunit</Shortcut>
+			<Description>Code snippet for creating test methods with xunit</Description>
+			<Author>firat.atceken</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodname</ID>
+					<Default>SampleTestMethodName</Default> 
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+		[Fact]	
+        public async Task $methodname$()
+        {
+            //Arrange
+
+
+			//Act
+
+
+			//Assert
+        }
+
+    
+     $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
